@@ -1,0 +1,23 @@
+:root {
+	--maroon: #732C2C;
+	--charcoal: #484041;
+	--muted: #A2999E;
+	--surface: #C6C7C4;
+	--offwhite: #EEF0F2;
+}
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: sans-serif;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background-color: var(--charcoal);
+	color: var(--offwhite);
+}
