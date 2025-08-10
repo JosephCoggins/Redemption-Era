@@ -21,3 +21,41 @@ body {
 	background-color: var(--charcoal);
 	color: var(--offwhite);
 }
+
+@keyframes fade-in-scale {
+	0% {
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+}
+
+#intro-overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.8);
+	animation: fade-out 1s ease forwards;
+	animation-delay: 2.5s;
+}
+
+#intro-overlay-logo {
+	max-width: 80%;
+	max-height: 80vh;
+	opacity: 0;
+	animation: fade-in-scale 2.5s ease forwards;
+}
