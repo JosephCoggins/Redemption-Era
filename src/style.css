@@ -106,6 +106,97 @@ header > nav .nav-icon {
 	width: 2rem;
 }
 
+main > #mission-statement {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+main > #mission-statement > figure > video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+	filter: brightness(0.4) saturate(1.1);
+	pointer-events: none;
+}
+
+main > #mission-statement > figure > figcaption {
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	bottom: 10vh;
+	text-align: center;
+}
+
+main > #mission-statement > figure > figcaption > ul {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0;
+	margin: 1.25rem auto;
+	list-style: none;
+}
+
+main > #mission-statement > figure > figcaption > ul > li {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+main > #mission-statement > figure > figcaption > ul > li > a {
+	display: block;
+	margin: 1.25rem auto;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: transparent;
+	color: var(--offwhite);
+	transition: background-color 0.3s;
+}
+
+main > #mission-statement > figure > figcaption > ul > li:first-of-type > a {
+	padding: 1rem 2rem;
+	border: 1px solid var(--maroon);
+}
+
+main > #mission-statement > figure > figcaption > ul > li:first-of-type > a:hover {
+	background-color: var(--maroon);
+}
+
+main > #mission-statement > figure > figcaption > ul > li:last-of-type > a {
+	padding: 1rem 4rem;
+	border: 1px solid var(--charcoal);
+}
+
+main > #mission-statement > figure > figcaption > ul > li:last-of-type > a:hover {
+	background-color: var(--charcoal);
+}
+
+main > #mission-statement > aside {
+	position: absolute;
+	z-index: 10;
+	inset: auto 2rem 2rem auto;
+}
+
+main > #mission-statement > aside > iframe {
+	margin: 0 !important;
+	border-radius: 1rem !important;
+}
+
+@media only screen and (max-width: 1280px) {
+	main > #mission-statement > figure > figcaption {
+		bottom: 20vh;
+	}
+}
+
 @media only screen and (max-width: 992px) {
 	header > nav {
 		flex-direction: column;
@@ -137,5 +228,20 @@ header > nav .nav-icon {
 
 	header > nav > #nav-links > li > a {
 		justify-content: center;
+	}
+
+	main > #mission-statement > figure > figcaption {
+		width: 100%;
+		bottom: 25vh;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	main > #mission-statement > figure > figcaption {
+		bottom: 0;
+	}
+
+	main > #mission-statement > aside {
+		display: none;
 	}
 }
