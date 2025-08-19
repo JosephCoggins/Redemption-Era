@@ -323,6 +323,75 @@ main > #podcast > a > img {
 	width: 2rem;
 }
 
+main > #pricing {
+	display: flex;
+	flex-flow: column;
+	justify-content: center; 
+	width: 80%;
+	min-height: 100vh;
+	margin: auto;
+	text-align: center;
+}
+
+main > #pricing > h2 {
+	margin: 2rem auto 0;
+}
+
+main > #pricing > p {
+	margin: 2rem auto;
+}
+
+main > #pricing > div {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+}
+
+main > #pricing > div > .package {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	border: 1px solid var(--muted);
+	border-radius: 1.2rem;
+	background-color: var(--surface);
+	color: var(--charcoal);
+	transition: background-color 0.3s;
+}
+
+main > #pricing > div > .package:hover {
+	background-color: var(--offwhite);
+}
+
+main > #pricing > div > .package > h3 {
+	margin: 0;
+}
+
+main > #pricing > div > .package > ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+main > #pricing > div > .package > ul > li {
+	margin: 1rem auto;
+}
+
+main > #pricing > div > .package > a {
+	padding: 1rem 4rem;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 0.3125rem;
+	background-color: var(--charcoal);
+    color: var(--offwhite);
+	transition: background-color 0.3s;
+}
+
+main > #pricing > div > .package > a:hover {
+	background-color: var(--maroon);
+}
+
 @media only screen and (max-width: 1280px) {
 	main > #mission-statement > figure > figcaption {
 		bottom: 20vh;
@@ -381,6 +450,12 @@ main > #podcast > a > img {
 
 	main > #meet-the-coach > aside > #logo {
 		width: 75%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	main > #pricing > div {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
