@@ -392,6 +392,74 @@ main > #pricing > div > .package > a:hover {
 	background-color: var(--maroon);
 }
 
+main > #faq {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.35rem;
+	margin: 2rem auto;
+}
+
+main > #faq > h2 {
+	text-align: center;
+}
+
+main > #faq > details {
+	width: 80%;
+	padding: 1.2rem;
+	border: 1px solid var(--muted);
+	border-radius: 0.8rem;
+	background-color: var(--surface);
+	color: var(--charcoal);
+	transition: background-color 0.3s;
+}
+
+main > #faq > details:hover {
+	background-color: var(--offwhite);
+}
+
+main > #faq > details:not(:has(#tos-dialog)) {
+	text-align: center;
+}
+
+main > #faq > details > summary {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+main > #faq > details > summary::-webkit-details-marker {
+	display: none;
+}
+
+main > #faq > details > summary > .faq-chevron {
+	width: 2rem;
+	transition: transform 0.3s;
+}
+
+main > #faq > details[open] > summary > .faq-chevron {
+	transform: rotate(90deg);
+}
+
+main > #faq > details > ul {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0;
+	margin: 2rem auto 0;
+	list-style: none;
+}
+
+main > #faq > details .faq-icon {
+	width: 3rem;
+}
+
+main > #faq > details > p + img {
+	display: block;
+	margin: 0 auto;
+}
+
 @media only screen and (max-width: 1280px) {
 	main > #mission-statement > figure > figcaption {
 		bottom: 20vh;
@@ -524,6 +592,10 @@ main > #pricing > div > .package > a:hover {
 
 	main > #podcast > a {
 		gap: 0;
+	}
+
+	main > #faq > details > ul {
+		gap: 0.5rem;
 	}
 }
 
