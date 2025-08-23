@@ -460,6 +460,45 @@ main > #faq > details > p + img {
 	margin: 0 auto;
 }
 
+main > #faq > details .tos-dialog-btn {
+	display: block;
+	padding: 1rem 5rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: var(--charcoal);
+    color: var(--offwhite);
+	transition: background-color 0.3s;
+}
+
+main > #faq > details .tos-dialog-btn:hover {
+	background-color: var(--maroon);
+}
+
+main > #faq > details > #tos-dialog-open {
+	margin: 1rem auto;
+}
+
+main > #faq > details > #tos-dialog {
+	width: 80%;
+	max-height: 80vh;
+	padding: 2rem;
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+	border: none;
+	overflow: auto;
+	clip-path: inset(0 round 0.8rem);
+}
+
+main > #faq > details > #tos-dialog > h1,
+main > #faq > details > #tos-dialog > h1 + p {
+	text-align: center;
+}
+
+main > #faq > details > #tos-dialog > #tos-dialog-close {
+	margin: 2rem auto 0;
+}
+
 @media only screen and (max-width: 1280px) {
 	main > #mission-statement > figure > figcaption {
 		bottom: 20vh;

@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const isEnglish = document.documentElement.lang.startsWith("en") || navigator.language.startsWith("en");
     const carousel = document.querySelector("#credentials");
     const images = carousel.querySelectorAll("img");
+    const tosDialog = document.querySelector("#tos-dialog")
+    const tosOpen = document.querySelector("#tos-dialog-open");
+    const tosClose = document.querySelector("#tos-dialog-close");
+    const tosHeading = tosDialog.querySelector("h1");
 
     navLinks.setAttribute("aria-expanded", "false");
     navState.addEventListener("change", () => {
@@ -30,4 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: "smooth"
         });
     }, 5000);
+
+    tosOpen.addEventListener("click", () => {
+        tosDialog.showModal();
+        if(tosHeading) tosHeading.focus();
+    });
+
+    tosClose.addEventListener("click", () => tosDialog.close());
+
+    tosDialog.addEventListener("keydown", event => {
+        if(event.key === "Escape") tosDialog.close();
+    });
+
+    tosDialog.addEventListener("close", () => tosOpen.focus());
 });
