@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tosOpen = document.querySelector("#tos-dialog-open");
     const tosClose = document.querySelector("#tos-dialog-close");
     const tosHeading = tosDialog.querySelector("h1");
+    const copyrightNotice = document.querySelector("#copyright-notice");
 
     navLinks.setAttribute("aria-expanded", "false");
     navState.addEventListener("change", () => {
@@ -47,4 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     tosDialog.addEventListener("close", () => tosOpen.focus());
+
+    const currentYear = new Date().getFullYear();
+    if(currentYear > 2025) copyrightNotice.textContent = `Copyright © 2025-${currentYear} Redemption Era LLC. All rights reserved.`;
 });

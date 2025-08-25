@@ -499,6 +499,32 @@ main > #faq > details > #tos-dialog > #tos-dialog-close {
 	margin: 2rem auto 0;
 }
 
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	border-top: 1px solid var(--muted);
+}
+
+footer > :first-child {
+	margin-top: 2rem;
+}
+
+footer > :last-child {
+	margin-bottom: 2rem;
+}
+
+footer > a {
+	display: block;
+	color: inherit;
+}
+
+footer > #copyright-notice {
+	font-weight: bold;
+}
+
 @media only screen and (max-width: 1280px) {
 	main > #mission-statement > figure > figcaption {
 		bottom: 20vh;
@@ -635,6 +661,10 @@ main > #faq > details > #tos-dialog > #tos-dialog-close {
 
 	main > #faq > details > ul {
 		gap: 0.5rem;
+	}
+
+	footer > #copyright-notice > span {
+		display: block;
 	}
 }
 
