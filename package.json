@@ -1,7 +1,7 @@
 {
   "name": "redemption-era",
   "private": true,
-  "version": "0.9.1",
+  "version": "0.9.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss-preset-env": "^10.3.1",
     "vite": "^7.1.2"
   }
 }
